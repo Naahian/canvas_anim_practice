@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        ".dart_tool": true,
+        ".idea": true,
+        "android": true,
+        "ios": true,
+        "linux": true,
+        "macos": true,
+        "test": true,
+        "web": true,
+        "windows": true,
+        ".gitignore": true,
+        ".metadata": true,
+        "analysis_options.yaml": true,
+        "canvas_anim_practice.iml": true,
+        "pubspec.lock": true,
+        "README.md": true
+    }
+}
