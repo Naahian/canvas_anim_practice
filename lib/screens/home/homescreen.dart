@@ -1,5 +1,6 @@
 import 'package:canvas_anim_practice/screens/screens.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Homescreen extends StatefulWidget {
@@ -18,6 +19,11 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text("Custom Paint Projects"),
+          centerTitle: true,
+          backgroundColor: Colors.grey[100],
+        ),
         bottomNavigationBar: bottomNavBar(),
         body: PageView.builder(
             itemCount: pages.length,
