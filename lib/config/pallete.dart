@@ -11,6 +11,9 @@ class Paints {
   late Paint orangeFill;
   late Paint blackFill;
   late Paint brownFill;
+  late Paint whiteFill;
+  late Paint greyFill;
+  late Paint glowPaint;
   // stroked paints
   late Paint blueStroke;
   late Paint redStroke;
@@ -20,6 +23,8 @@ class Paints {
   late Paint orangeStroke;
   late Paint blackStroke;
   late Paint brownStroke;
+  late Paint whiteStroke;
+  late Paint greyStroke;
 
   Paints({this.width = 1.0}) {
     blueStroke = Paint()
@@ -40,7 +45,7 @@ class Paints {
       ..style = PaintingStyle.fill;
 
     yellowFill = Paint()
-      ..color = Colors.yellow
+      ..color = Colors.yellow.shade600
       ..style = PaintingStyle.fill;
 
     purpleFill = Paint()
@@ -59,6 +64,14 @@ class Paints {
       ..color = Colors.brown
       ..style = PaintingStyle.fill;
 
+    whiteFill = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.fill;
+
+    greyFill = Paint()
+      ..color = Colors.grey.shade600
+      ..style = PaintingStyle.fill;
+
     redStroke = Paint()
       ..color = Colors.red
       ..style = PaintingStyle.stroke
@@ -70,7 +83,7 @@ class Paints {
       ..strokeWidth = width;
 
     yellowStroke = Paint()
-      ..color = Colors.yellow
+      ..color = Colors.yellow.shade600
       ..style = PaintingStyle.stroke
       ..strokeWidth = width;
 
@@ -90,8 +103,72 @@ class Paints {
       ..strokeWidth = width;
 
     brownStroke = Paint()
-      ..color = Colors.brown
+      ..color = const Color(0xFF722F16)
       ..style = PaintingStyle.stroke
       ..strokeWidth = width;
+
+    whiteStroke = Paint()
+      ..color = Colors.white
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = width;
+
+    greyStroke = Paint()
+      ..color = Colors.grey.shade600
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = width;
+  }
+}
+
+class GlowPaint {
+  final double radius;
+  late Paint yellow;
+  late Paint blue;
+  late Paint grey;
+  late Paint orange;
+  late Paint red;
+  late Paint green;
+  late Paint purple;
+  late Paint white;
+
+  GlowPaint({this.radius = 2}) {
+    yellow = Paint()
+      ..color = Colors.yellow.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    grey = Paint()
+      ..color = Colors.grey.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    orange = Paint()
+      ..color = Colors.orange.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    blue = Paint()
+      ..color = Colors.blue.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    red = Paint()
+      ..color = Colors.red.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    green = Paint()
+      ..color = Colors.green.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    purple = Paint()
+      ..color = Colors.purple.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
+
+    white = Paint()
+      ..color = Colors.white.withOpacity(0.8)
+      ..style = PaintingStyle.fill
+      ..maskFilter = MaskFilter.blur(BlurStyle.normal, radius);
   }
 }
